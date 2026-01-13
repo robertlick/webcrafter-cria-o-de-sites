@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WebCrafter - Criação de Sites</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+              jakarta: ['Plus Jakarta Sans', 'sans-serif'],
+            },
+            colors: {
+              web: {
+                blue: '#2563EB',
+                dark: '#0F172A',
+              },
+              vita: {
+                primary: '#14B8A6',
+                dark: '#0F766E',
+              },
+              lumiere: {
+                gold: '#D4AF37',
+                dark: '#1C1917',
+              }
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="min-h-screen bg-slate-50 font-sans text-slate-900 selection:bg-blue-200">
+
+    <!-- Floating Header -->
+    <header class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
+      <div class="bg-white/90 backdrop-blur-md shadow-lg rounded-full px-6 py-3 flex items-center justify-between gap-8 md:gap-16 border border-slate-100 max-w-4xl w-full">
+        <div class="flex items-center gap-2 cursor-pointer" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+          <div class="bg-blue-600 p-1.5 rounded-lg">
+            <i data-lucide="code-2" class="w-5 h-5 text-white"></i>
+          </div>
+          <span class="font-bold text-lg tracking-tight text-slate-800">Web<span class="text-blue-600">Crafter</span></span>
+        </div>
+
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+          <a href="#portfolio" class="hover:text-blue-600 transition-colors">Portfólio</a>
+          <a href="#processo" class="hover:text-blue-600 transition-colors">Processo</a>
+          <a href="#contato" class="hover:text-blue-600 transition-colors">Contato</a>
+        </nav>
+
+        <a href="#contato" class="bg-slate-900 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-slate-800 transition-transform hover:scale-105 no-underline">
+          Orçamento
+        </a>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-40 pb-20 px-4 max-w-7xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-1.5 rounded-full text-sm font-medium mb-8">
+        <i data-lucide="code-2" class="w-4 h-4"></i>
+        Desenvolvimento Web Especializado
+      </div>
+      
+      <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 text-slate-900 leading-[1.1]">
+        Criação de Sites <br />
+        Profissionais para <br />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
+          Empresas e Negócios
+        </span>
+      </h1>
+      
+      <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
+        Transforme visitantes em clientes com um site moderno, rápido e otimizado para celulares. Design exclusivo que valoriza sua marca.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#portfolio" class="bg-blue-600 text-white px-8 py-3.5 rounded-lg font-semibold hover:bg-blue-700 transition-all hover:scale-105 flex items-center gap-2 shadow-lg shadow-blue-600/20">
+          Ver Projetos <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        </a>
+        <a href="#contato" class="bg-white text-slate-700 border border-slate-200 px-8 py-3.5 rounded-lg font-semibold hover:bg-slate-50 transition-all hover:scale-105">
+          Solicitar Orçamento
+        </a>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 px-4 max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-slate-900">Portfólio Selecionado</h2>
+        <p class="text-slate-600">Veja exemplos reais de como podemos elevar a presença digital do seu negócio.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <!-- Card 1: Dejoss -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col">
+          <div class="h-56 bg-slate-900 relative overflow-hidden flex items-center justify-center">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 z-10"></div>
+            <img 
+              src="https://images.unsplash.com/photo-1589829545456-07710260133a?auto=format&fit=crop&q=80&w=800" 
+              alt="Advocacia" 
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            />
+            <div class="absolute z-20 text-center">
+               <h3 class="text-white font-serif text-2xl tracking-widest uppercase">Dejoss</h3>
+               <p class="text-yellow-500 font-serif italic">Advocacia</p>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <span class="text-blue-600 text-xs font-bold tracking-wider uppercase mb-2">Advocacia & Jurídico</span>
+            <h3 class="text-2xl font-bold mb-3 text-slate-900">Dejoss Advocacia</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">
+              Site institucional que transmite autoridade e confiança. Ideal para escritórios de advocacia e consultoria jurídica.
+            </p>
+            <a 
+              href="https://robertlick.github.io/Dejoss-Advocacia-exemplo/" 
+              target="_blank" 
+              class="w-full bg-slate-900 text-white py-3 rounded-lg font-medium flex items-center justify-center gap-2 hover:bg-slate-800 transition-colors"
+            >
+              <i data-lucide="external-link" class="w-4 h-4"></i> Ver site
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2: VitaClinic -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col">
+          <div class="h-56 bg-teal-50 relative overflow-hidden">
+             <div class="absolute inset-0 flex">
+                <div class="w-1/2 flex items-center justify-center bg-white p-6">
+                  <div class="text-left">
+                     <div class="flex items-center gap-1 text-teal-500 font-bold text-lg mb-2">
+                        <div class="p-1 border-2 border-teal-500 rounded-md"><div class="w-2 h-2 bg-teal-500 rounded-full"></div></div>
+                        VitaClinic
+                     </div>
+                     <h4 class="font-bold text-slate-900 leading-tight">Sua saúde merece <span class="text-teal-500">atenção total.</span></h4>
+                  </div>
+                </div>
+                <div class="w-1/2">
+                  <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=600" class="h-full w-full object-cover" alt="Clinic" />
+                </div>
+             </div>
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <span class="text-blue-600 text-xs font-bold tracking-wider uppercase mb-2">Saúde & Clínicas</span>
+            <h3 class="text-2xl font-bold mb-3 text-slate-900">VitaClinic</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">
+              Design limpo e acolhedor focado na experiência do paciente, com facilidade de agendamento e apresentação do corpo clínico.
+            </p>
+            <a 
+              href="vitaclinic.html" 
+              class="w-full bg-slate-900 text-white py-3 rounded-lg font-medium flex items-center justify-center gap-2 hover:bg-slate-800 transition-colors"
+            >
+              <i data-lucide="external-link" class="w-4 h-4"></i> Ver site
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3: Lumiere -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col">
+          <div class="h-56 bg-stone-900 relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover opacity-80" alt="Spa" />
+              <div class="absolute inset-0 flex items-center justify-center">
+                  <div class="border border-white/30 px-6 py-2 bg-black/20 backdrop-blur-sm text-white font-serif text-xl tracking-widest">
+                      Visualizar Site Completo
+                  </div>
+              </div>
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <span class="text-blue-600 text-xs font-bold tracking-wider uppercase mb-2">Estética & Beleza</span>
+            <h3 class="text-2xl font-bold mb-3 text-slate-900">Lumière Estética</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">
+              Visual luxuoso e minimalista que valoriza imagens de alta qualidade. Perfeito para clínicas de estética, spas e salões.
+            </p>
+            <a 
+              href="lumiere.html" 
+              class="w-full bg-slate-900 text-white py-3 rounded-lg font-medium flex items-center justify-center gap-2 hover:bg-slate-800 transition-colors"
+            >
+              <i data-lucide="external-link" class="w-4 h-4"></i> Ver site
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="processo" class="bg-slate-900 text-white py-24 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Como Funciona</h2>
+          <p class="text-slate-400">Processo simplificado e transparente.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-12 text-center">
+          <div class="relative">
+            <div class="w-20 h-20 bg-slate-800 rounded-2xl mx-auto flex items-center justify-center mb-6 relative z-10">
+              <div class="absolute -top-3 -right-3 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-sm font-bold">1</div>
+              <i data-lucide="briefcase" class="w-10 h-10 text-blue-400"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Briefing</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Conversamos para entender seu negócio, público-alvo e objetivos principais.
+            </p>
+          </div>
+
+          <div class="relative">
+            <div class="w-20 h-20 bg-slate-800 rounded-2xl mx-auto flex items-center justify-center mb-6 relative z-10">
+              <div class="absolute -top-3 -right-3 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-sm font-bold">2</div>
+              <i data-lucide="palette" class="w-10 h-10 text-blue-400"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Criação</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Desenvolvemos o layout, conteúdo e programamos o site com as melhores tecnologias.
+            </p>
+          </div>
+
+          <div class="relative">
+            <div class="w-20 h-20 bg-slate-800 rounded-2xl mx-auto flex items-center justify-center mb-6 relative z-10">
+              <div class="absolute -top-3 -right-3 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-sm font-bold">3</div>
+              <i data-lucide="send" class="w-10 h-10 text-blue-400"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Entrega</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Entregamos seu site completo com design exclusivo, totalmente pronto para o lançamento.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="py-24 px-4 max-w-4xl mx-auto">
+      <div class="bg-blue-600 rounded-3xl p-8 md:p-16 text-center text-white shadow-2xl shadow-blue-900/20">
+        <h2 class="text-3xl md:text-5xl font-bold mb-12">Pronto para começar?</h2>
+        
+        <div class="grid md:grid-cols-3 gap-6">
+          <a href="#" class="bg-white/10 backdrop-blur-lg hover:bg-white/20 transition-colors p-6 rounded-xl border border-white/10 flex flex-col items-center group">
+            <div class="text-green-400 mb-3 group-hover:scale-110 transition-transform">
+               <i data-lucide="phone" class="w-8 h-8"></i>
+            </div>
+            <h3 class="font-bold text-lg">WhatsApp</h3>
+            <span class="text-xs text-blue-100 mt-1">Resposta imediata</span>
+          </a>
+
+          <a href="#" class="bg-white/10 backdrop-blur-lg hover:bg-white/20 transition-colors p-6 rounded-xl border border-white/10 flex flex-col items-center group">
+            <div class="text-pink-400 mb-3 group-hover:scale-110 transition-transform">
+               <i data-lucide="instagram" class="w-8 h-8"></i>
+            </div>
+            <h3 class="font-bold text-lg">Instagram</h3>
+            <span class="text-xs text-blue-100 mt-1">Acompanhe nosso trabalho</span>
+          </a>
+
+          <a href="#" class="bg-white/10 backdrop-blur-lg hover:bg-white/20 transition-colors p-6 rounded-xl border border-white/10 flex flex-col items-center group">
+            <div class="text-yellow-400 mb-3 group-hover:scale-110 transition-transform">
+               <i data-lucide="mail" class="w-8 h-8"></i>
+            </div>
+            <h3 class="font-bold text-lg">E-mail</h3>
+            <span class="text-xs text-blue-100 mt-1">Orçamento personalizado</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-8 text-center text-slate-400 text-sm border-t border-slate-100">
+      <p>© 2026 WebCrafter - Todos os direitos reservados.</p>
+      <p class="mt-2">Site feito por Robert Dejoss (Webcrafter)</p>
+    </footer>
+
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
